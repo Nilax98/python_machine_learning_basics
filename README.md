@@ -20,7 +20,7 @@ The modules cover supervised and unsupervised learning. Neural networks are cove
 
 ## Course Structure
 
-Modules 01–07 each have three notebooks:
+Modules 01–07 and HS2026 Neural Networks Parts I and II use the same three-notebook structure:
 
 - `<topic>_concept.ipynb`: the idea in plain language, the most important formulas, a small worked example and provided demonstration code.
 - `<topic>_exercise.ipynb`: guided practice with one data set. Data preparation and plots are provided; fill a few marked code gaps and interpret the results.
@@ -74,6 +74,22 @@ The avalanche notebook models fatal outcomes **among recorded accidents** with b
 ## Neural Networks
 
 The folder [08_Neural_Networks](08_Neural_Networks/) contains notebooks on simple neural networks, multi-layer perceptrons and convolutional neural networks.
+
+**HS2026 Part I: From Logistic Regression to a Neural Network** follows the concept/exercise/solution structure:
+
+- [Concepts](08_Neural_Networks/HS2026/lecture1/logistic_regression_to_neural_network_concept.ipynb): sigmoid outputs, hidden ReLU units, shared inputs, baselines, validation and business costs, with provided small demonstrations.
+- [Exercise](08_Neural_Networks/HS2026/lecture1/logistic_regression_to_neural_network_exercise.ipynb): one email dataset, supplied preparation and plots, four marked code gaps and interpretation questions.
+- [Solution](08_Neural_Networks/HS2026/lecture1/logistic_regression_to_neural_network_solution.ipynb): the same numbered steps with complete code, short answers and self-check criteria.
+
+These notebooks accompany SW07 Lecture 1. One worked step fits its 10-minute demonstration slot; the complete guided exercise is separate practical work. Both models use the same 16 prepared features and fixed historical partitions. Settings and thresholds are selected on validation data, not test results. Optional XGBoost, model persistence, embeddings and deeper-network comparisons are not prerequisites for the core notebooks; additional packages and authorized raw text are needed for the relevant extensions.
+
+**HS2026 Part II: How Neural Networks Learn** uses the same structure in `08_Neural_Networks/HS2026/lecture2/`:
+
+- [Concepts](08_Neural_Networks/HS2026/lecture2/how_neural_networks_learn_concept.ipynb): loss, backpropagation, simultaneous updates, checkpoints, learning rate and regularization, with provided small demonstrations.
+- [Exercise](08_Neural_Networks/HS2026/lecture2/how_neural_networks_learn_exercise.ipynb): five activities, four marked code gaps, supplied training/plotting helpers and interpretation prompts without saved answers or outputs.
+- [Solution](08_Neural_Networks/HS2026/lecture2/how_neural_networks_learn_solution.ipynb): matching activities with complete code, worked answers and self-check criteria.
+
+These accompany SW07 Lecture 2. Activities 1-3 are alternative 10-minute demonstrations; choose only one for a 45-minute lecture. Capacity and regularization are optional practicals. The full sequence takes about 60 minutes plus execution time. Real-data comparisons use the same 1,000 training and 1,200 validation emails, training-fitted scaling and an 80-epoch budget. Learning-rate results use final models; capacity and regularization results use best-validation-BCE checkpoints. The test set remains untouched.
 
 - **Introduction:** Overview of neural networks and their biological inspiration.
 - **Mathematical Foundations:** Understanding perceptrons, activation functions, backpropagation, and gradient descent.
