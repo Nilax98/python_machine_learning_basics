@@ -45,6 +45,14 @@ https://github.com/mario-gellrich-zhaw/python_machine_learning_basics
 Create a new GitHub Codespaces environment based on the fork. The Codespace uses Python 3.11 and installs all required
 packages automatically (from `requirements.txt`) when it is created.
 
+The container installs CPU-only PyTorch from the official PyTorch wheel index before the remaining packages and checks
+that `import torch` succeeds. The root requirements include the tested Lecture 3/4 dependencies, including NumPy 1.26.4;
+neither CUDA nor torchvision is needed for the active notebooks.
+
+For an existing Codespace, pull these configuration changes and run **Codespaces: Rebuild Container** from the Command
+Palette. Select the rebuilt Codespace's Python 3.11 notebook kernel and restart it before rerunning cells.
+Check the environment in that kernel with `import torch; print(torch.__version__)`; the Codespace should report `2.2.2+cpu`.
+
 **Working on your own computer instead:** install Python 3.11 and then the required packages with
 
 ```bash
